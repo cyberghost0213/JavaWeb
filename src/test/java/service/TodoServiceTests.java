@@ -1,12 +1,19 @@
 package service;
 
+import lombok.extern.log4j.Log4j;
+import lombok.extern.log4j.Log4j2;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.modelmapper.ModelMapper;
+import org.zerock.jdbcex.dao.TodoDAO;
+import org.zerock.jdbcex.domain.TodoVO;
 import org.zerock.jdbcex.dto.TodoDTO;
 import org.zerock.jdbcex.service.TodoService;
+import org.zerock.jdbcex.util.MapperUtil;
 
 import java.time.LocalDate;
 
+@Log4j2
 public class TodoServiceTests {
 
     private TodoService todoService;
@@ -23,6 +30,8 @@ public class TodoServiceTests {
                 .title("JDBC Test Title")
                 .dueDate(LocalDate.now())
                 .build();
+        log.info("----------------"); //테스트 코드의 Log4j2설정 확인
+        log.info(todoDTO);
 
         todoService.register(todoDTO);
     }
