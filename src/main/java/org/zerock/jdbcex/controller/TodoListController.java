@@ -36,9 +36,9 @@ public class TodoListController extends HttpServlet {
     }
     // ㅇㅇㅇㅇㅇ
     /** 안녕 나는 Crow야 */
-<<<<<<< HEAD
     //  testing
-=======
     /** 나는 까마귀야 */
->>>>>>> a3646b6d24d8f156ef37d04d8e013d2ee0e61b74
+    
+    // 추가추가
+
 }
